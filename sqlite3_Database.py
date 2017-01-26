@@ -79,18 +79,6 @@ def sales():
 
 
 
-#def countrows():
-#    cur = conn.cursor()
-#    countrow = raw_input('Print the row in which you would like to count.')
-#    cur.execute("Select * from 'countrow'")
-#    for row in cur:
-#        print str(row[0]) + "\t" + str(row[1]) + "\t" + str(row[2]) + "\t" + str(row[3]) + "\n"
-##conn.close()
-#
-#
-#countrows()
-
-
 
 def countrows2():
     cur = conn.cursor()
@@ -147,7 +135,6 @@ cars()
 plans()
 rates()
 sales() 
-#countrows()
 countrows2()
 sumrev()
 
