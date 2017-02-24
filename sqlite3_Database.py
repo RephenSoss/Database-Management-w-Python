@@ -1,5 +1,4 @@
 # Stephen Ross
-# Create and enter sales data
 
 # Import sqlite3 and connect to database
 import sqlite3
@@ -66,7 +65,7 @@ def sales():
     cur.execute("Drop Table if Exists sales")
     cur.execute("create table Sales (TXTID int not null, StoreID int, CarID int, PlanID int, Unique_Sale int, Revenue int);")
    
-# Create a dictionary from the txt file       
+# Create a dictionary from the txt file
     with open('sales.txt') as f:
         data = [line.strip().split() for line in f.readlines()]
 # Insert dictionary into databases
@@ -77,9 +76,7 @@ def sales():
     print "Sale rows inserted and committed."
     print "\n"
 
-
-
-
+    
 def countrows2():
     cur = conn.cursor()
     # Get List of Tables:      
@@ -123,13 +120,9 @@ def sumrev():
     cur.execute(revenues)
     printout = cur.fetchall()
     print printout
-#
-
-
 
 
 # Run Functions
-
 stores()
 cars()
 plans()
@@ -137,21 +130,3 @@ rates()
 sales() 
 countrows2()
 sumrev()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
